@@ -1,3 +1,62 @@
-<h1>Bienvenue </h1>
+<h1 class="text-center">Bienvenue dans mon blog </h1>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12 jumbotron">
+            <h2 class="text-center">Retrouvevez les dernieres informations de la guinée </h2> 
+            <p>
+            <b> What is Lorem Ipsum?</b> <br>    
+                Lorem Ipsum is simply dummy text of the printing and 
+                typesetting industry. Lorem Ipsum has been the industry's standard dummy 
+                text ever since the 1500s, when an unknown printer took a galley of type and 
+                scrambled it to make a type specimen book. It has survived not only five centuries,
+                but also the leap into electronic typesetting, remaining essentially unchanged. 
+                It was popularised in the 1960s with the release of Letraset sheets containing Lorem 
+                Ipsum passages, and more recently with 
+                desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            </p>                    
+        </div>
+    </div>
 
-<%=  link_to "logout", destroy_user_session_path, method: :delete   %>
+     <div class="row mb-2">
+    <div class="col-md-6">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 text-primary">Guinea</strong>
+          <h3 class="mb-0">Featured post</h3>
+          <div class="mb-1 text-muted">Nov 12</div>
+          <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+          <a href="#" class="stretched-link">Continue reading</a>
+        </div>
+        <div class="col-auto d-none d-lg-block">
+             <%= image_tag  "exemple.png", width:"200",height:"250",preserveAspectRatio: "xMidYMid slice",
+              focusable:"false",role:"img", aria_label: "Placeholder: Thumbnail" %>
+              <rect width="100%" height="100%" fill="#55595c"/>
+          
+           
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 text-success">Design</strong>
+          <h3 class="mb-0">Post title</h3>
+          <div class="mb-1 text-muted">Nov 11</div>
+          <p class="mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+          <a href="#" class="stretched-link">Continue reading</a>
+        </div>
+         <div class="col-auto d-none d-lg-block">
+             <%= image_tag  "exemple.png", width:"200",height:"250",preserveAspectRatio: "xMidYMid slice",
+              focusable:"false",role:"img", aria_label: "Placeholder: Thumbnail" %>
+              <rect width="100%" height="100%" fill="#55595c"/>
+                     
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+
