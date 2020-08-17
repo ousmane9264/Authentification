@@ -11,13 +11,21 @@
 
   <body>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-          <a class="navbar-brand" href="#">Mon blog</a>
+          <a class="navbar-brand" href="/">Mon blog</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav" style="margin-left: 800px">
-              <%=  link_to "Déconnexion", destroy_user_session_path, method: :delete, class: 'nav-link active btn btn-danger' %> 
+            <div class="navbar-nav" style="margin-left: 700px">
+              
+              <%= link_to "Creer un article",new_category_path, class: 'nav-link active' %>
+              <%= link_to "Mes articles",categories_path, class: 'nav-link active' %>
+              <%=  link_to "Mon compte", destroy_user_session_path, method: :delete,class: 'nav-link active' %> 
+
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <%=  link_to "Déconnexion", destroy_user_session_path, method: :delete, class: 'nav-link active btn btn-danger' %>
+             
+            
             </div>
           </div>
         </nav>

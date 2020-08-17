@@ -1,6 +1,18 @@
 class WelcomeController < ApplicationController
     layout "blog/base"
   def index
-    flash[:success] = "Bienvenue sur la page acceuil"
+    @categories = Category.all
+  end
+
+  def show
+    @category = Category.find(params[:id])
+  end
+
+  private 
+  
+  def category_params
+
+    params.required(:category).permit(:name, :content)
+    
   end
 end
