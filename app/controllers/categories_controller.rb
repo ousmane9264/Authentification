@@ -23,7 +23,6 @@ class CategoriesController < ApplicationController
 
   def create
     @category = Category.create(category_params)
-
     redirect_to categories_path(@category.id)
   end
   def new
@@ -44,8 +43,11 @@ class CategoriesController < ApplicationController
   
   def category_params
 
-    params.required(:category).permit(:name, :content)
+    params.required(:category).permit(:name, :content, :date, :image)
     
   end
 
+  private
+
+  
 end

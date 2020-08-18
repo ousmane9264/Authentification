@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_17_132544) do
+ActiveRecord::Schema.define(version: 2020_08_18_125506) do
 
   create_table "articles", force: :cascade do |t|
     t.string "name"
@@ -20,6 +20,10 @@ ActiveRecord::Schema.define(version: 2020_08_17_132544) do
   create_table "categories", force: :cascade do |t|
     t.string "name"
     t.string "content"
+    t.date "date"
+    t.string "image"
+    t.string "image_data"
+    t.string "text"
   end
 
   create_table "posts", force: :cascade do |t|

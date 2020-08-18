@@ -10,7 +10,6 @@
 
                         <%end%>
                     </div>
-                   
                 <%end%>
                 <div class="card-body"> 
                     <%= form_for @category do |f| %>
@@ -18,10 +17,21 @@
                       <b><%= f.label :Titre_Article, class: 'form-label'  %></b>  
                         <%= f.text_field :name, class: 'form-control' %>
                     </p>
+                     <p>
+                      <b><%= f.label :Date_de_creation, class: 'form-label'  %></b>  
+                        <%= f.date_field :date, class: 'form-control' %>
+                    </p>
+                     <p>
+                      <b><%= f.label :Image, class: 'form-label'  %></b> 
+                        <%= f.file_field :image, class: 'form-control' %>
+                    </p>
+
                     <p>
                       <b><%= f.label :Description, class: 'form-label'  %> </b>
                         <%= f.text_area :content, class: 'form-control', placeholder: 'decrivez votre article' %>
                     </p>
+                    
+
    
                     <p>
                         <button type="submit" class="btn btn-primary">Modifier</button>

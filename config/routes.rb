@@ -13,7 +13,6 @@ Rails.application.routes.draw do
   get 'categories/destroy'
   
   get 'welcome/index', as: 'welcome_index'
- 
   # resources :articles 
 
 

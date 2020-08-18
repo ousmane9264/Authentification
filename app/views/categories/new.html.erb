@@ -2,14 +2,7 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-8 offset-2 jumbotron">
-                  <% @category.errors.full_messages.each do |message| %>
-                    <div class="alert alert-danger">
-                       
-                            <%= message %>
-
-                      
-                    </div>
-                     <%end%>
+                
                
             <div class="card">
 
@@ -19,10 +12,20 @@
                       <b><%= f.label :Titre_Article, class: 'form-label'  %></b>  
                         <%= f.text_field :name, class: 'form-control' %>
                     </p>
+                     <p>
+                      <b><%= f.label :Date_de_creation, class: 'form-label'  %></b>  
+                        <%= f.date_field :date, class: 'form-control' %>
+                    </p>
+                     <p>
+                      <b><%= f.label :Image, class: 'form-label'  %></b>  
+                        <%= f.hidden_field :image, value: @category.cached_image_data %>
+                        <%= f.file_field :image, class: 'form-control' %>
+                    </p>
                     <p>
                       <b><%= f.label :Description, class: 'form-label'  %> </b>
                         <%= f.text_area :content, class: 'form-control', placeholder: 'decrivez votre article' %>
                     </p>
+                   
    
                     <p>
                         <button type="submit" class="btn btn-primary">Enregistrer</button>
