@@ -1,13 +1,16 @@
 class CategoriesController < ApplicationController
+  before_action :authenticate_user!
   layout "blog/base"
-
   def index
+    @title = "Page Articles"
     @categories = Category.all
+    @user = current_user.Category.all
   end
   def show
     @category = Category.find(params[:id])
   end
   def update
+      @title = "Page Modification"
     @category = Category.find(params[:id])
     if @category.update(category_params)
       redirect_to categories_path
@@ -16,6 +19,7 @@ class CategoriesController < ApplicationController
     end  
   end
   def create
+    @title = "Creation d'un article"
     @category = Category.new(category_params)
 
     if @category.save
