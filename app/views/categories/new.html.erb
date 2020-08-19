@@ -2,10 +2,21 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-8 offset-2 jumbotron">
-                
+       <% if @category.errors.any? %>
+            <div id="error_explanation">
+                <div class="alert alert-danger">
+                    Vous avez des erreurs dans le formulaire
+                     <ul>
+                        <% @category.errors.full_messages.each do |msg| %>
+                        <li><%= msg %></li>
+                        <% end %>
+                    </ul>
+                </div>
+           
+            </div>
+        <% end %>
                
             <div class="card">
-
                 <div class="card-body"> 
                     <%= form_for @category do |f| %>
                     <p>

@@ -7,7 +7,6 @@
                     <div class="alert alert-danger">
                          <% @category.errors.full_messages.each do |message| %>
                             <%= message %>
-
                         <%end%>
                     </div>
                 <%end%>
@@ -18,11 +17,14 @@
                         <%= f.text_field :name, class: 'form-control' %>
                     </p>
                      <p>
-                      <b><%= f.label :Date_de_creation, class: 'form-label'  %></b>  
+                      <b><%= f.label :Date_de_creation, class: 'form-label'  %>
+                      </b>  
                         <%= f.date_field :date, class: 'form-control' %>
                     </p>
                      <p>
-                      <b><%= f.label :Image, class: 'form-label'  %></b> 
+                      <b>
+                        <%= f.label :Image, class: 'form-label'  %>
+                      </b> 
                         <%= f.file_field :image, class: 'form-control' %>
                     </p>
 

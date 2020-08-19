@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-3 offset-1">
+            <%= image_tag @category.image_url, width:"200",height:"250",preserveAspectRatio: "xMidYMid slice",
+              focusable:"false",role:"img", aria_label: "Placeholder: Thumbnail" %>     
+        </div>
+        <div class="col-lg-7">
+           <h2><b><%= @category.name%></b></h2> 
+            <p>
+                <%= @category.content %>
+            </p>
+
+            <p>publié le : <%= @category.date%></p>
+
+            <p> <a href="/" class="btn btn-link">Retour</a></p>
+            
+        </div>
+    </div>
+</div>
+  
+

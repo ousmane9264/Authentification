@@ -12,7 +12,8 @@ Rails.application.routes.draw do
   get 'categories/edit'
   get 'categories/destroy'
   
-  get 'welcome/index', as: 'welcome_index'
+
+  get 'welcome/show/:id' => 'welcome#show', as: 'welcome_show'
   # resources :articles 
 
 
